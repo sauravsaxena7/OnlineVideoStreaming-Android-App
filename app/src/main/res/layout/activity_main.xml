@@ -74,18 +74,36 @@
                 android:layout_rowWeight="1"
                 android:layout_margin="10dp"
                 android:layout_columnWeight="1"
-                app:cardElevation="6dp"
+                app:cardElevation="8dp"
                 android:backgroundTint="@color/white"
 
                 >
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="30sp"
-                    android:text="saurav suman"
-                    android:textColor="@color/black"
-                    />
+                    android:orientation="vertical"
+                    >
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/ic_painting" />
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensansregular"
+                        android:gravity="start"
+                        android:padding="5dp"
+                        android:text="View Images"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="#7A41DF"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -100,13 +118,31 @@
 
                 >
 
-                <TextView
-                    android:layout_width="wrap_content"
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="30sp"
-                    android:text="saurav suman"
-                    android:textColor="@color/black"
-                    />
+                    android:orientation="vertical"
+                    >
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/ic_video" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensansregular"
+                        android:gravity="start"
+                        android:padding="5dp"
+                        android:text="View Videos"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="#7A41DF"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -121,14 +157,30 @@
 
                 >
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="30sp"
-                    android:text="saurav suman"
-                    android:textColor="@color/black"
-                    />
+                    android:orientation="vertical"
+                    >
 
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/ic_contact_information" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensansregular"
+                        android:gravity="start"
+                        android:padding="5dp"
+                        android:text="View Contacts"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="#7A41DF"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
@@ -142,13 +194,31 @@
 
                 >
 
-                <TextView
-                    android:layout_width="wrap_content"
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="30sp"
-                    android:text="saurav suman"
-                    android:textColor="@color/black"
-                    />
+                    android:orientation="vertical"
+                    >
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/ic_file_storage" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensansregular"
+                        android:gravity="start"
+                        android:padding="5dp"
+                        android:text="View File"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="#7A41DF"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -163,13 +233,30 @@
 
                 >
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="30sp"
-                    android:text="saurav suman"
-                    android:textColor="@color/black"
-                    />
+                    android:orientation="vertical"
+                    >
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/ic_confidential" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensansregular"
+                        android:gravity="start"
+                        android:padding="5dp"
+                        android:text="View Design"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="#7A41DF"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -184,13 +271,31 @@
 
                 >
 
-                <TextView
-                    android:layout_width="wrap_content"
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="30sp"
-                    android:text="saurav suman"
-                    android:textColor="@color/black"
-                    />
+                    android:orientation="vertical"
+                    >
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/ic_diary" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensansregular"
+                        android:gravity="start"
+                        android:padding="5dp"
+                        android:text="View Diary"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="#7A41DF"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -209,6 +314,7 @@
             android:textColor="#FFFFFF"
             android:drawableRight="@drawable/ic_fast_forward_double_right_arrows"
             android:textSize="15sp"
+            android:backgroundTint="#5F13E6"
             android:drawablePadding="7dp"
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
