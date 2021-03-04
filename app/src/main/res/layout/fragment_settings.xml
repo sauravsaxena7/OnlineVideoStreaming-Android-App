@@ -31,25 +31,29 @@
                 android:textSize="20sp"
                 android:text="Manage Access?"
                 android:fontFamily="@font/opensansregular"
-                android:textColor="#C20FE1"
+                android:textColor="#009688"
                 />
 
+
+
             <TextView
+                android:id="@+id/manage_access"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="13sp"
                 android:layout_marginTop="14dp"
-                android:text="By clicking this button you can easily manage your data. whether you can make your data public or private. In case of public this is no more confidential or not shield."
+                android:text="By clicking this button you can easily manage your data. whether you can make your data public or private. In case of public the data is no more confidential or not shield."
                 android:fontFamily="@font/opensansregular"
                 android:textColor="#1A1A1B"
                 tools:ignore="HardcodedText" />
+
 
             <com.google.android.material.button.MaterialButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="Yes Manage!"
-                android:textSize="17sp"
+                android:textSize="14sp"
                 android:textColor="@color/white"
                 android:backgroundTint="#009688"
                 android:textAllCaps="false"
@@ -67,26 +71,40 @@
                 android:layout_marginTop="34dp"
                 android:text="Storage?"
                 android:fontFamily="@font/opensansregular"
-                android:textColor="@color/main"
+                android:textColor="#009688"
                 />
 
+
+
             <TextView
+                android:id="@+id/storage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="13sp"
                 android:layout_marginTop="14dp"
-                android:text="Our company provide only 1.50GB of disks space for every user. After reaching the disk limit you should by additional storage for continuing our services."
+                android:text="Our company provide only 1.50GB of disks space for every user. After reaching the disk limit you should buy additional storage for continuing our services."
 
                 android:fontFamily="@font/opensansregular"
                 android:textColor="#1A1A1B"
                 tools:ignore="HardcodedText" />
+            <TextView
+                android:id="@+id/stroage_"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:layout_marginTop="4dp"
+                android:text="1.23 GB of 1.50 GB"
+                android:textStyle="bold"
+                android:textColor="#2196F3"
+                />
+
 
             <com.google.android.material.button.MaterialButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="Buy Storage!"
-                android:textSize="17sp"
+                android:textSize="14sp"
                 android:textColor="@color/white"
                 android:backgroundTint="#009688"
                 android:textAllCaps="false"
@@ -104,10 +122,11 @@
                 android:layout_marginTop="34dp"
                 android:text="Theme?"
                 android:fontFamily="@font/opensansregular"
-                android:textColor="@color/main"
+                android:textColor="#009688"
                 />
 
             <TextView
+                android:id="@+id/theme"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="13sp"
@@ -119,6 +138,7 @@
                 tools:ignore="HardcodedText" />
 
             <TextView
+                android:id="@+id/theme_"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="17sp"
@@ -133,8 +153,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Theme Changer!"
-                android:textSize="17sp"
+                android:text="Change Theme!"
+                android:textSize="14sp"
                 android:textColor="@color/white"
                 android:backgroundTint="#009688"
                 android:textAllCaps="false"
@@ -146,120 +166,7 @@
 
 
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="50sp"
-                android:text="2"
-                android:textColor="@color/black"
-                />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="50sp"
-                android:text="3"
-                android:textColor="@color/black"
-                />
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="50sp"
-                android:text="4"
-                android:textColor="@color/black"
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="50sp"
-                android:text="5"
-                android:textColor="@color/black"
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="50sp"
-                android:text="6"
-                android:textColor="@color/black"
-                />
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="50sp"
-                android:text="7"
-                android:textColor="@color/black"
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="50sp"
-                android:text="8"
-                android:textColor="@color/black"
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="50sp"
-                android:text="9"
-                android:textColor="@color/black"
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="50sp"
-                android:text="11"
-                android:textColor="@color/black"
-                />
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="50sp"
-                android:text="@string/app_name"
-                android:textColor="@color/black"
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="50sp"
-                android:text="@string/app_name"
-                android:textColor="@color/black"
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="50sp"
-                android:text="@string/app_name"
-                android:textColor="@color/black"
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="50sp"
-                android:text="@string/app_name"
-                android:textColor="@color/black"
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="50sp"
-                android:text="ppppppppppp"
-                android:textColor="@color/black"
-                />
 
 
         </LinearLayout>
