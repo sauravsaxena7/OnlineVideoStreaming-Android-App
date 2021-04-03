@@ -1,4 +1,4 @@
-package com.jlcsoftware.linkdisks;
+package com.jlcsoftware.linkdisks.sharedPreferencesss;
 
 import android.app.Activity;
 import android.content.Context;
@@ -6,7 +6,7 @@ import android.content.SharedPreferences;
 
 public class SharedPreferencesClass {
 
-    private static final String USER_PREF = "THEME PREFERENCE";
+    private static final String USER_PREF = "LinkDisk's";
     private SharedPreferences appShared;
 
     private SharedPreferences.Editor prefEditor;
@@ -20,10 +20,12 @@ public class SharedPreferencesClass {
     //int
 
     public int getValue_int(String key) {
+
         return appShared.getInt(key,0);
     }
 
-    public void setValue_int(String key,int value){
+    public void setValue_int(String key,int value)
+    {
         prefEditor.putInt(key,value).commit();
     }
 

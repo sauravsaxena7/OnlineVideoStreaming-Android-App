@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".passCodeView.PassCode">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            >
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/ic_launcher_foreground"/>
+
+            <TextView
+                android:id="@+id/email_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:background="@drawable/edit_bg"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/opensansregular"
+                android:text="sauravsrivastava121@gmail.com"/>
+
+            <TextView
+                android:id="@+id/indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:textColor="#009688"
+                android:textSize="17sp"
+                android:fontFamily="@font/opensansregular"
+                android:text="Generate Your LinkDisk's PassCode"/>
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:layout_gravity="center_horizontal"
+
+                >
+
+                <TextView
+                    android:id="@+id/t_count_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_textview"
+                    android:textColor="@android:color/white"
+                    android:gravity="center"
+                    android:layout_margin="14dp"
+                    />
+
+                <TextView
+                    android:id="@+id/t_count_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_textview"
+                    android:textColor="@android:color/white"
+                    android:gravity="center"
+                    android:layout_margin="14dp"
+                    />
+
+                <TextView
+                    android:id="@+id/t_count_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_textview"
+                    android:textColor="@android:color/white"
+                    android:gravity="center"
+                    android:layout_margin="14dp"
+                    />
+
+                <TextView
+                    android:id="@+id/t_count_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_textview"
+                    android:textColor="@android:color/white"
+                    android:gravity="center"
+                    android:layout_margin="14dp"
+                    />
+
+            </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            >
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="460dp"
+                android:layout_alignParentBottom="true"
+                android:alignmentMode="alignMargins"
+                android:columnOrderPreserved="false"
+                android:orientation="vertical"
+                android:padding="14dp"
+                android:rowCount="4"
+
+                >
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_rowWeight="1"
+                    android:layout_margin="10dp"
+                    android:layout_columnWeight="1"
+                    app:cardElevation="8dp"
+                    android:id="@+id/t_1"
+                    app:rippleColor="@color/ripple"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/opensansregular"
+                        android:textSize="18sp"
+                        />
+                </com.google.android.material.card.MaterialCardView>
+
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_rowWeight="1"
+                    android:layout_margin="10dp"
+                    android:layout_columnWeight="1"
+                    app:cardElevation="8dp"
+                    android:id="@+id/t_4"
+                    app:rippleColor="@color/ripple"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/opensansregular"
+                        android:textSize="18sp"
+                        />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_rowWeight="1"
+                    android:layout_margin="10dp"
+                    android:layout_columnWeight="1"
+                    app:cardElevation="8dp"
+                    android:id="@+id/t_7"
+                    app:rippleColor="@color/ripple"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="7"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/opensansregular"
+                        android:textSize="18sp"
+                        />
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/delete_pass"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_rowWeight="1"
+                    android:layout_margin="10dp"
+                    android:layout_columnWeight="1"
+                    app:cardElevation="8dp"
+                    app:rippleColor="@color/ripple"
+                    >
+                    <ImageView
+
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/opensansregular"
+                        android:src="@drawable/ic_backspace_black"
+                        />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_rowWeight="1"
+                    android:layout_margin="10dp"
+                    android:layout_columnWeight="1"
+                    app:cardElevation="8dp"
+                    android:id="@+id/t_2"
+                    app:rippleColor="@color/ripple"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/opensansregular"
+                        android:textSize="18sp"
+                        />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_rowWeight="1"
+                    android:layout_margin="10dp"
+                    android:layout_columnWeight="1"
+                    app:cardElevation="8dp"
+                    android:id="@+id/t_5"
+                    app:rippleColor="@color/ripple"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/opensansregular"
+                        android:textSize="18sp"
+                        />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_rowWeight="1"
+                    android:layout_margin="10dp"
+                    android:layout_columnWeight="1"
+                    app:cardElevation="8dp"
+                    android:id="@+id/t_8"
+                    app:rippleColor="@color/ripple"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="8"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/opensansregular"
+                        android:textSize="18sp"
+                        />
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_rowWeight="1"
+                    android:layout_margin="10dp"
+                    android:layout_columnWeight="1"
+                    app:cardElevation="8dp"
+                    android:id="@+id/t_0"
+                    app:rippleColor="@color/ripple"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/opensansregular"
+                        android:textSize="18sp"
+                        />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_rowWeight="1"
+                    android:layout_margin="10dp"
+                    android:layout_columnWeight="1"
+                    app:cardElevation="8dp"
+                    android:id="@+id/t_3"
+                    app:rippleColor="@color/ripple"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/opensansregular"
+                        android:textSize="18sp"
+                        />
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_rowWeight="1"
+                    android:layout_margin="10dp"
+                    android:layout_columnWeight="1"
+                    app:cardElevation="8dp"
+                    android:id="@+id/t_6"
+                    app:rippleColor="@color/ripple"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="6"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/opensansregular"
+                        android:textSize="18sp"
+                        />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_rowWeight="1"
+                    android:layout_margin="10dp"
+                    android:layout_columnWeight="1"
+                    app:cardElevation="8dp"
+                    android:id="@+id/t_9"
+                    app:rippleColor="@color/ripple"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="9"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/opensansregular"
+                        android:textSize="18sp"
+                        />
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_rowWeight="1"
+                    android:layout_margin="10dp"
+                    android:layout_columnWeight="1"
+                    app:cardElevation="8dp"
+                    android:id="@+id/done_pass"
+                    app:rippleColor="@color/ripple"
+                    >
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/opensansregular"
+                        android:src="@drawable/ic_done"
+                        />
+                </com.google.android.material.card.MaterialCardView>
+
+
+
+
+            </GridLayout>
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+</ScrollView>

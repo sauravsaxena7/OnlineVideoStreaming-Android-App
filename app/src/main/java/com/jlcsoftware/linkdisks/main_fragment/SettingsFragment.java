@@ -1,13 +1,11 @@
 package com.jlcsoftware.linkdisks.main_fragment;
 
 import android.app.AlertDialog;
-import android.content.res.Configuration;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,8 +16,7 @@ import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.button.MaterialButton;
 import com.jlcsoftware.linkdisks.MainActivity;
 import com.jlcsoftware.linkdisks.R;
-import com.jlcsoftware.linkdisks.SharedPreferencesClass;
-import com.jlcsoftware.linkdisks.WholeApplication;
+import com.jlcsoftware.linkdisks.sharedPreferencesss.SharedPreferencesClass;
 
 public class SettingsFragment extends Fragment {
 

@@ -6,22 +6,19 @@ import androidx.appcompat.app.AppCompatDelegate;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 
-import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
-import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.jlcsoftware.linkdisks.main_fragment.AddFragment;
 import com.jlcsoftware.linkdisks.main_fragment.DownloadsFragment;
 import com.jlcsoftware.linkdisks.main_fragment.HomeFragment;
 import com.jlcsoftware.linkdisks.main_fragment.SettingsFragment;
+import com.jlcsoftware.linkdisks.sharedPreferencesss.SharedPreferencesClass;
 
 public class MainActivity extends AppCompatActivity {
 
