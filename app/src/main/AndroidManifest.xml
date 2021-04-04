@@ -11,24 +11,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LinkDisks"
         android:usesCleartextTraffic="true">
-        <activity android:name=".passCodeView.PassCode">
-
-
-        </activity>
-        <activity android:name=".login_activity.Login">
-
-
-
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-
+        </activity>
+        <activity android:name=".passCodeView.PassCode"></activity>
+        <activity android:name=".login_activity.Login">
 
         </activity>
-        <activity android:name=".imagepicker.BSImagePicker"></activity>
+        <activity android:name=".imagepicker.BSImagePicker" />
         <activity android:name=".MainActivity" />
 
         <provider

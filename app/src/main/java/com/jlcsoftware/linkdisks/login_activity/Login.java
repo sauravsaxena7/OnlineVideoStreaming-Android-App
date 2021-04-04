@@ -18,6 +18,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -44,7 +45,6 @@ import java.util.HashMap;
 
 public class Login extends AppCompatActivity {
 
-    private RelativeLayout relativeLayout ;
     private GoogleSignInClient mGoogleSignInClient;
 
     private static int RC_SIGN_IN=1024;
@@ -53,12 +53,14 @@ public class Login extends AppCompatActivity {
 
     private Dialog loading_dialog;
     private TextView error_content_tv;
+
+    LottieAnimationView google_sign_in;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        sometext=findViewById(R.id.sometext);
+//        sometext=findViewById(R.id.sometext);
 
 
         loading_dialog=new Dialog(Login.this);
@@ -68,14 +70,14 @@ public class Login extends AppCompatActivity {
 
         loading_dialog.setCanceledOnTouchOutside(true);
 
-//        loading_dialog.setOnKeyListener(new DialogInterface.OnKeyListener() {
-//            @Override
-//            public boolean onKey(DialogInterface dialog, int keyCode, KeyEvent event) {
-//                // Prevent dialog close on back press button
-//                return keyCode == KeyEvent.KEYCODE_BACK;
-//
-//            }
-//        });
+        loading_dialog.setOnKeyListener(new DialogInterface.OnKeyListener() {
+            @Override
+            public boolean onKey(DialogInterface dialog, int keyCode, KeyEvent event) {
+                // Prevent dialog close on back press button
+                return keyCode == KeyEvent.KEYCODE_BACK;
+
+            }
+        });
 
 
 
@@ -93,13 +95,13 @@ public class Login extends AppCompatActivity {
         // Build a GoogleSignInClient with the options specified by gso.
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 
-        mGoogleSignInClient.signOut()
-                .addOnCompleteListener(this, new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        // ...
-                    }
-                });
+//        mGoogleSignInClient.signOut()
+//                .addOnCompleteListener(this, new OnCompleteListener<Void>() {
+//                    @Override
+//                    public void onComplete(@NonNull Task<Void> task) {
+//                        // ...
+//                    }
+//                });
 
 
         // Check for existing Google Sign In account, if the user is already signed in
@@ -108,9 +110,9 @@ public class Login extends AppCompatActivity {
 
 
 
-        relativeLayout = findViewById(R.id.login);
 
-        relativeLayout.setOnClickListener(new View.OnClickListener() {
+        google_sign_in=findViewById(R.id.google_sign);
+        google_sign_in.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 error_content_tv.setText("Please Wait....");
@@ -161,7 +163,7 @@ public class Login extends AppCompatActivity {
 
 
 
-            }  loading_dialog.dismiss();
+            }
 
 
             // Signed in successfully, show authenticated UI.
@@ -182,6 +184,8 @@ public class Login extends AppCompatActivity {
         //parsing json arrays https://dds861.medium.com/json-arrays-parsing-using-retrofit-and-recycleview-9b2d494cc24c
 
         //https://stackoverflow.com/questions/9598707/gson-throwing-expected-begin-object-but-was-begin-array
+
+        //https://github.com/akshatapatel/Iris-Recognition
 
 
         JsonObject jsonObject=new JsonObject();
@@ -219,13 +223,8 @@ public class Login extends AppCompatActivity {
             @Override
             public void onFailure(retrofit2.Call call, Throwable t) {
 
-
-
                 Toast.makeText(Login.this, ""+t.getMessage()+" please Try again! ", Toast.LENGTH_SHORT).show();
-                loading_dialog.dismiss();
-                Intent intent=new Intent(Login.this,Login.class);
-                startActivity(intent);
-                finish();
+                signIn();
 
 
             }
