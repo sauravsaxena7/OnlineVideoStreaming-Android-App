@@ -289,6 +289,7 @@ public class PassCode extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                loading_dialog.show();
                 if(flag==0){
                     RegisterUser(user_id,email,final_pass_code);
                 }else{
@@ -346,6 +347,7 @@ public class PassCode extends AppCompatActivity {
                     }else{
                         SharedPreferencesClass sharedPreferencesClass = new SharedPreferencesClass(PassCode.this);
                         sharedPreferencesClass.setValue_string("Token",registerResponse.getToken());
+                        loading_dialog.dismiss();
                         startActivity(new Intent(PassCode.this, MainActivity.class));
                         finish();
                     }
