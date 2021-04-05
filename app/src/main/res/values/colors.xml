@@ -11,4 +11,5 @@
     <color name="ripple">#42A5A4A4</color>
     <color name="light_color">#39393A</color>
     <color name="color_white">#AEABAB</color>
+    <color name="color_main">#273b7a</color>
 </resources>

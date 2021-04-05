@@ -43,7 +43,7 @@
                 android:background="@drawable/edit_bg"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/opensansregular"
-                android:text="sauravsrivastava121@gmail.com"/>
+                />
 
             <TextView
                 android:id="@+id/indicator"
@@ -80,7 +80,7 @@
                     android:id="@+id/t_count_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/rounded_textview"
+                    android:background="@drawable/circle"
                     android:textColor="@android:color/white"
                     android:gravity="center"
                     android:layout_margin="14dp"
@@ -90,7 +90,7 @@
                     android:id="@+id/t_count_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/rounded_textview"
+                    android:background="@drawable/circle"
                     android:textColor="@android:color/white"
                     android:gravity="center"
                     android:layout_margin="14dp"
@@ -100,7 +100,7 @@
                     android:id="@+id/t_count_3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/rounded_textview"
+                    android:background="@drawable/circle"
                     android:textColor="@android:color/white"
                     android:gravity="center"
                     android:layout_margin="14dp"
@@ -110,7 +110,7 @@
                     android:id="@+id/t_count_4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/rounded_textview"
+                    android:background="@drawable/circle"
                     android:textColor="@android:color/white"
                     android:gravity="center"
                     android:layout_margin="14dp"
@@ -150,6 +150,7 @@
                     app:rippleColor="@color/ripple"
                     >
                     <TextView
+                        android:id="@+id/text1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="1"
@@ -173,6 +174,7 @@
                     app:rippleColor="@color/ripple"
                     >
                     <TextView
+                        android:id="@+id/text4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="4"
@@ -194,6 +196,7 @@
                     app:rippleColor="@color/ripple"
                     >
                     <TextView
+                        android:id="@+id/text7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="7"
@@ -212,6 +215,7 @@
                     android:layout_rowWeight="1"
                     android:layout_margin="10dp"
                     android:layout_columnWeight="1"
+                    android:backgroundTint="#273b7a"
                     app:cardElevation="8dp"
                     app:rippleColor="@color/ripple"
                     >
@@ -222,7 +226,7 @@
                         android:layout_gravity="center"
                         android:textStyle="bold"
                         android:fontFamily="@font/opensansregular"
-                        android:src="@drawable/ic_backspace_black"
+                        android:src="@drawable/ic_backspace"
                         />
                 </com.google.android.material.card.MaterialCardView>
 
@@ -237,6 +241,7 @@
                     app:rippleColor="@color/ripple"
                     >
                     <TextView
+                        android:id="@+id/text2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="2"
@@ -258,6 +263,7 @@
                     app:rippleColor="@color/ripple"
                     >
                     <TextView
+                        android:id="@+id/text5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="5"
@@ -279,6 +285,7 @@
                     app:rippleColor="@color/ripple"
                     >
                     <TextView
+                        android:id="@+id/text8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="8"
@@ -301,6 +308,7 @@
                     app:rippleColor="@color/ripple"
                     >
                     <TextView
+                        android:id="@+id/text0"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="0"
@@ -322,6 +330,7 @@
                     app:rippleColor="@color/ripple"
                     >
                     <TextView
+                        android:id="@+id/text3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="3"
@@ -342,6 +351,7 @@
                     app:rippleColor="@color/ripple"
                     >
                     <TextView
+                        android:id="@+id/text6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="6"
@@ -363,6 +373,7 @@
                     app:rippleColor="@color/ripple"
                     >
                     <TextView
+                        android:id="@+id/text9"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="9"
@@ -380,6 +391,7 @@
                     android:layout_rowWeight="1"
                     android:layout_margin="10dp"
                     android:layout_columnWeight="1"
+                    android:backgroundTint="#273b7a"
                     app:cardElevation="8dp"
                     android:id="@+id/done_pass"
                     app:rippleColor="@color/ripple"

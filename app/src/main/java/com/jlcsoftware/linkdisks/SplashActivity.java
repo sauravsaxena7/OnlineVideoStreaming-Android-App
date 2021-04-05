@@ -1,10 +1,14 @@
 package com.jlcsoftware.linkdisks;
 
 import androidx.appcompat.app.AppCompatActivity;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -13,8 +17,13 @@ import android.widget.TextView;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.jlcsoftware.linkdisks.ModelResponse.UserOneResponse;
+import com.jlcsoftware.linkdisks.client.NetworkClient;
 import com.jlcsoftware.linkdisks.login_activity.Login;
 import com.jlcsoftware.linkdisks.passCodeView.PassCode;
+import com.jlcsoftware.linkdisks.sharedPreferencesss.SharedPreferencesClass;
+
+import java.util.List;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -25,6 +34,7 @@ public class SplashActivity extends AppCompatActivity {
 
     Animation  textAnimation ,layout_animation;
 
+    private List<UserOneResponse> userList =null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,9 +81,19 @@ public class SplashActivity extends AppCompatActivity {
 
                 GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(SplashActivity.this);
 
+
                 if(acct!=null){
-                    startActivity(new Intent(SplashActivity.this, Login.class));
-                    finish();
+                    SharedPreferencesClass sharedPreferencesClass=new SharedPreferencesClass(SplashActivity.this);
+                    String Token = sharedPreferencesClass.getValue_string("Token");
+
+
+                    if(Token.equals("")){
+                        startActivity(new Intent(SplashActivity.this, PassCode.class));
+                        finish();
+                    }else{
+                        startActivity(new Intent(SplashActivity.this, MainActivity.class));
+                        finish();
+                    }
                 }else{
                     startActivity(new Intent(SplashActivity.this, Login.class));
                     finish();

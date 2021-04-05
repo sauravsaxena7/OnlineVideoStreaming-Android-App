@@ -104,6 +104,8 @@ public class Login extends AppCompatActivity {
 //                });
 
 
+
+
         // Check for existing Google Sign In account, if the user is already signed in
         // the GoogleSignInAccount will be non-null.
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
@@ -140,6 +142,8 @@ public class Login extends AppCompatActivity {
         if (requestCode == RC_SIGN_IN) {
             // The Task returned from this call is always completed, no need to attach
             // a listener.
+
+
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
 
             handleSignInResult(task);
@@ -159,7 +163,8 @@ public class Login extends AppCompatActivity {
                 String personId = acct.getId();
                 Uri personPhoto = acct.getPhotoUrl();
 
-                registerUser(personId,personEmail);
+                startActivity(new Intent(Login.this,PassCode.class));
+                finish();
 
 
 
@@ -176,66 +181,6 @@ public class Login extends AppCompatActivity {
         }
     }
 
-    private void registerUser(String personId, String personEmail) {
-
-
-        //https://medium.com/android-news/handmade-backend-for-android-app-using-python-flask-framework-b173ba2bb3aa
-
-        //parsing json arrays https://dds861.medium.com/json-arrays-parsing-using-retrofit-and-recycleview-9b2d494cc24c
-
-        //https://stackoverflow.com/questions/9598707/gson-throwing-expected-begin-object-but-was-begin-array
-
-        //https://github.com/akshatapatel/Iris-Recognition
-
-
-        JsonObject jsonObject=new JsonObject();
-        jsonObject.addProperty("user_id",personId);
-        jsonObject.addProperty("size","0KB");
-        jsonObject.addProperty("email",personEmail);
-        jsonObject.addProperty("pass_code","*#/%");
-
-
-        Call<RegisterResponse> call = NetworkClient
-                .getInstance().getApi()
-                .Register_body(jsonObject);
-
-        call.enqueue(new Callback() {
-            @Override
-            public void onResponse(retrofit2.Call call, Response response) {
-
-                RegisterResponse registerResponse = (RegisterResponse) response.body();
-
-                if(response.isSuccessful()){
-
-
-                    SharedPreferencesClass sharedPreferencesClass = new SharedPreferencesClass(Login.this);
-
-                    sharedPreferencesClass.setValue_string("token",registerResponse.getToken());
-
-                    startActivity(new Intent(Login.this,PassCode.class));
-                    finish();
-
-
-                }
-
-            }
-
-            @Override
-            public void onFailure(retrofit2.Call call, Throwable t) {
-
-                Toast.makeText(Login.this, ""+t.getMessage()+" please Try again! ", Toast.LENGTH_SHORT).show();
-                signIn();
-
-
-            }
-        });
-
-
-
-
-
-
-    }
 
 
 }
