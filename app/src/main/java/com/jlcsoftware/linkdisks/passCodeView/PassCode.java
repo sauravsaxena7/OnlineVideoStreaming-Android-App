@@ -3,6 +3,10 @@ package com.jlcsoftware.linkdisks.passCodeView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
+import okhttp3.MediaType;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -29,13 +33,20 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.card.MaterialCardView;
 import com.google.gson.JsonObject;
 import com.jlcsoftware.linkdisks.MainActivity;
+import com.jlcsoftware.linkdisks.ModelResponse.LoginResponse;
 import com.jlcsoftware.linkdisks.ModelResponse.RegisterResponse;
 import com.jlcsoftware.linkdisks.ModelResponse.UserOneResponse;
 import com.jlcsoftware.linkdisks.R;
 import com.jlcsoftware.linkdisks.client.NetworkClient;
+import com.jlcsoftware.linkdisks.imagepicker.BSImagePicker;
+import com.jlcsoftware.linkdisks.login_activity.BasicAuthInterceptor;
 import com.jlcsoftware.linkdisks.login_activity.Login;
 import com.jlcsoftware.linkdisks.sharedPreferencesss.SharedPreferencesClass;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
 import java.util.List;
 
 public class PassCode extends AppCompatActivity {
@@ -95,14 +106,7 @@ public class PassCode extends AppCompatActivity {
 
 
 
-        if(checkUser()){
-            loading_dialog.dismiss();
-            indicator_tv.setText("Enter Your PassCode..");
-            flag=1;
-        }else{
-             loading_dialog.dismiss();
-             indicator_tv.setText("Generate Your LinkDisk's PassCode");
-        }
+
 
 
         t1 = findViewById(R.id.t_1);
@@ -155,7 +159,6 @@ public class PassCode extends AppCompatActivity {
                 if(count[0] <4){
                     final_pass_code=final_pass_code + tv1.getText().toString();
                     count[0]++;
-                    Toast.makeText(PassCode.this, ""+final_pass_code, Toast.LENGTH_SHORT).show();
                     ColorIndicator(count[0]);
                     checkDone(count[0]);
                 }
@@ -168,7 +171,6 @@ public class PassCode extends AppCompatActivity {
                 if(count[0] <4){
                             final_pass_code=final_pass_code + tv2.getText().toString();
                     count[0]++;
-                    Toast.makeText(PassCode.this, ""+final_pass_code, Toast.LENGTH_SHORT).show();
                     ColorIndicator(count[0]);
                     checkDone(count[0]);
                 }
@@ -183,7 +185,6 @@ public class PassCode extends AppCompatActivity {
                 if(count[0] <4){
                     final_pass_code=final_pass_code + tv3.getText().toString();
                     count[0]++;
-                    Toast.makeText(PassCode.this, ""+final_pass_code, Toast.LENGTH_SHORT).show();
                     ColorIndicator(count[0]);
                     checkDone(count[0]);
                 }
@@ -196,7 +197,6 @@ public class PassCode extends AppCompatActivity {
                 if(count[0] <4){
                     final_pass_code=final_pass_code + tv4.getText().toString();
                     count[0]++;
-                    Toast.makeText(PassCode.this, ""+final_pass_code, Toast.LENGTH_SHORT).show();
                     ColorIndicator(count[0]);
                     checkDone(count[0]);
                 }
@@ -209,7 +209,6 @@ public class PassCode extends AppCompatActivity {
                 if(count[0] <4){
                     final_pass_code=final_pass_code + tv5.getText().toString();
                     count[0]++;
-                    Toast.makeText(PassCode.this, ""+final_pass_code, Toast.LENGTH_SHORT).show();
                     ColorIndicator(count[0]);
                     checkDone(count[0]);
                 }
@@ -222,7 +221,6 @@ public class PassCode extends AppCompatActivity {
                 if(count[0] <4){
                     final_pass_code=final_pass_code + tv6.getText().toString();
                     count[0]++;
-                    Toast.makeText(PassCode.this, ""+final_pass_code, Toast.LENGTH_SHORT).show();
                     ColorIndicator(count[0]);
                     checkDone(count[0]);
                 }
@@ -236,7 +234,6 @@ public class PassCode extends AppCompatActivity {
                 if(count[0] <4){
                     final_pass_code=final_pass_code + tv7.getText().toString();
                     count[0]++;
-                    Toast.makeText(PassCode.this, ""+final_pass_code, Toast.LENGTH_SHORT).show();
                     ColorIndicator(count[0]);
                     checkDone(count[0]);
                 }
@@ -249,7 +246,6 @@ public class PassCode extends AppCompatActivity {
                 if(count[0] <4){
                     final_pass_code=final_pass_code + tv8.getText().toString();
                     count[0]++;
-                    Toast.makeText(PassCode.this, ""+final_pass_code, Toast.LENGTH_SHORT).show();
                     ColorIndicator(count[0]);
                     checkDone(count[0]);
                 }
@@ -263,7 +259,6 @@ public class PassCode extends AppCompatActivity {
                 if(count[0] <4){
                     final_pass_code=final_pass_code + tv9.getText().toString();
                     count[0]++;
-                    Toast.makeText(PassCode.this, ""+final_pass_code, Toast.LENGTH_SHORT).show();
                     ColorIndicator(count[0]);
                     checkDone(count[0]);
                 }
@@ -277,7 +272,6 @@ public class PassCode extends AppCompatActivity {
                 if(count[0] <4){
                     final_pass_code=final_pass_code + tv0.getText().toString();
                     count[0]++;
-                    Toast.makeText(PassCode.this, ""+final_pass_code, Toast.LENGTH_SHORT).show();
                     ColorIndicator(count[0]);
                     checkDone(count[0]);
                 }
@@ -303,20 +297,92 @@ public class PassCode extends AppCompatActivity {
             public void onClick(View v) {
 
 
-                Indicator(count[0]);
-                count[0]--;
-                removeLastChar(final_pass_code);
-                Toast.makeText(PassCode.this, ""+final_pass_code+" "+count[0], Toast.LENGTH_SHORT).show();
-                checkDone(count[0]);
+                if(count[0]>0){
+                    Indicator(count[0]);
+                    count[0]--;
+                    removeLastChar(final_pass_code);
+                    checkDone(count[0]);
+                }
+
 
             }
         });
+
+        checkUser();
 
 
 
     }
 
     private void loginMethod(String email, String final_pass_code) {
+
+
+
+
+        OkHttpClient client = new OkHttpClient.Builder()
+                .addInterceptor(new BasicAuthInterceptor(email, final_pass_code))
+                .build();
+
+
+
+        Request request = new Request.Builder()
+                .url("https://linkdisks.herokuapp.com/linkApi/login")
+                .build();
+
+
+        client.newCall(request).enqueue(new okhttp3.Callback() {
+            @Override
+            public void onFailure(okhttp3.Call call, IOException e) {
+                call.cancel();
+
+                // In order to access the TextView inside the UI thread, the code is executed inside runOnUiThread()
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        loading_dialog.dismiss();
+                        Toast.makeText(PassCode.this, "Failed to Connect to Server", Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
+
+
+
+            @Override
+            public void onResponse(okhttp3.Call call, okhttp3.Response response) throws IOException {
+
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+
+
+                            if(response.isSuccessful()){
+                                String jsonData = response.body().string();
+
+                                JSONObject Jobject = new JSONObject(jsonData);
+                                String str = Jobject.getString("message");
+                                SharedPreferencesClass sharedPreferencesClass = new SharedPreferencesClass(PassCode.this);
+                                sharedPreferencesClass.setValue_string("Token",Jobject.getString("token"));
+                                Toast.makeText(PassCode.this, ""+str, Toast.LENGTH_SHORT).show();
+                                loading_dialog.dismiss();
+                                startActivity(new Intent(PassCode.this, MainActivity.class));
+                                finish();
+                            }else{
+                                loading_dialog.dismiss();
+                                indicator_tv.setText(response.body().string()+" Invalid Username Or Password");
+                                indicator_tv.setTextColor(getResources().getColor(R.color.red));
+                            }
+
+
+                        } catch (IOException | JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
+            }
+        });
+
+
     }
 
 
@@ -337,6 +403,7 @@ public class PassCode extends AppCompatActivity {
             @Override
             public void onResponse(retrofit2.Call call, Response response) {
 //saurav suman
+
                 RegisterResponse registerResponse = (RegisterResponse) response.body();
 
                 if(response.isSuccessful()){
@@ -347,6 +414,7 @@ public class PassCode extends AppCompatActivity {
                     }else{
                         SharedPreferencesClass sharedPreferencesClass = new SharedPreferencesClass(PassCode.this);
                         sharedPreferencesClass.setValue_string("Token",registerResponse.getToken());
+                        Toast.makeText(PassCode.this, "User Registered Successfully!", Toast.LENGTH_SHORT).show();
                         loading_dialog.dismiss();
                         startActivity(new Intent(PassCode.this, MainActivity.class));
                         finish();
@@ -473,9 +541,15 @@ public class PassCode extends AppCompatActivity {
                 if(response.isSuccessful()){
                     if(registerResponse.getError().equals("401")){
                         check[0] = true;
+                        loading_dialog.dismiss();
+                        indicator_tv.setText("Enter Your PassCode..");
+                        flag=1;
                     }else{
+                        loading_dialog.dismiss();
+                        indicator_tv.setText("Generate Your LinkDisk's PassCode");
                         check[0] = false;
                     }
+
 
                 }
 

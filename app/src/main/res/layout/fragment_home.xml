@@ -352,7 +352,7 @@
 
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/login_email_next_btn_id"
+            android:id="@+id/upgrade_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"

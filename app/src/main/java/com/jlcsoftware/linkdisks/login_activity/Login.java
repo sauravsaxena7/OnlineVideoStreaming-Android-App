@@ -163,6 +163,8 @@ public class Login extends AppCompatActivity {
                 String personId = acct.getId();
                 Uri personPhoto = acct.getPhotoUrl();
 
+                loading_dialog.dismiss();
+
                 startActivity(new Intent(Login.this,PassCode.class));
                 finish();
 
