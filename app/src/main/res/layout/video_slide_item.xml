@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="275dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <ImageView
+
+        android:id="@+id/slide_imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_account_circle_white_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/play_imageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/slide_imageView"
+        app:layout_constraintEnd_toEndOf="@+id/slide_imageView"
+        app:layout_constraintStart_toStartOf="@+id/slide_imageView"
+        app:layout_constraintTop_toTopOf="@+id/slide_imageView"
+        android:src="@drawable/ic_play_arrow_white_24dp"/>
+
+    <ImageView
+        android:id="@+id/gradient_imageView"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/slide_imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/slide_imageView"
+        app:layout_constraintTop_toBottomOf="@+id/play_imageView"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/gradient_bg" />
+
+    <TextView
+        android:id="@+id/slide_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/opensansregular"
+        android:text="TextView"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/gradient_imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/gradient_imageView"
+        app:layout_constraintTop_toTopOf="@+id/gradient_imageView"
+        app:layout_constraintVertical_bias="0.628" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

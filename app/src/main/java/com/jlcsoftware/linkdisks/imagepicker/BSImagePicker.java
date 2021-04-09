@@ -59,7 +59,7 @@ public class BSImagePicker extends AppCompatActivity implements com.asksira.bsim
         ivImage5 = findViewById(R.id.iv_image5);
         ivImage6 = findViewById(R.id.iv_image6);
 
-        link= findViewById(R.id.link);
+
 
 
 

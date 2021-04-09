@@ -56,10 +56,6 @@
                 android:fontFamily="@font/opensansregular"
                 android:text="Generate Your LinkDisk's PassCode"/>
 
-
-
-
-
         </LinearLayout>
 
 

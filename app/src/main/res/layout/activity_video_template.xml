@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".video_streaming.VideoTemplate">
+
+
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       >
+
+
+
+       <androidx.viewpager.widget.ViewPager
+           android:id="@+id/template_viewPager"
+           android:layout_width="match_parent"
+           android:layout_height="275dp"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent"
+           >
+       </androidx.viewpager.widget.ViewPager>
+
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_margin="10dp"
+           android:text="YourVideos"
+           android:fontFamily="@font/opensansregular"
+           android:textStyle="bold"
+           android:textSize="20sp"/>
+
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/video_recycler_view"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_margin="1dp"
+           />
+
+
+   </LinearLayout>
+
+
+
+</ScrollView>
