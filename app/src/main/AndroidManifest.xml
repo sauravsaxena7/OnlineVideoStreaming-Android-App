@@ -11,21 +11,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LinkDisks"
         android:usesCleartextTraffic="true">
-        <activity android:name=".video_streaming.VideoTemplate"></activity>
-        <activity android:name=".video_streaming.OnlineVideoStreamingApp"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
-
-            />
-        <activity android:name=".SplashActivity">
+        <activity android:name=".gallery.GalleryActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".video_streaming.VideoTemplate" />
+        <activity
+            android:name=".video_streaming.OnlineVideoStreamingApp"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity android:name=".SplashActivity"></activity>
         <activity android:name=".passCodeView.PassCode" />
         <activity android:name=".login_activity.Login" />
-        <activity android:name=".imagepicker.BSImagePicker" />
+        <activity android:name=".imagepicker.BSImagePicker">
+
+        </activity>
         <activity android:name=".MainActivity" />
 
         <provider
