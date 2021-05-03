@@ -26,6 +26,7 @@ import com.google.android.material.button.MaterialButton;
 import com.google.android.material.card.MaterialCardView;
 import com.jlcsoftware.linkdisks.R;
 import com.jlcsoftware.linkdisks.SplashActivity;
+import com.jlcsoftware.linkdisks.gallery.GalleryActivity;
 import com.jlcsoftware.linkdisks.imagepicker.BSImagePicker;
 import com.jlcsoftware.linkdisks.login_activity.Login;
 import com.jlcsoftware.linkdisks.sharedPreferencesss.SharedPreferencesClass;
@@ -78,7 +79,7 @@ public class HomeFragment extends Fragment {
         imageCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity(),"hello",Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getActivity(), GalleryActivity.class));
             }
         });
 
