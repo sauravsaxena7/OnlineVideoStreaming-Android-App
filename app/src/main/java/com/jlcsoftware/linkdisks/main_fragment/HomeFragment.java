@@ -27,6 +27,7 @@ import com.google.android.material.card.MaterialCardView;
 import com.jlcsoftware.linkdisks.R;
 import com.jlcsoftware.linkdisks.SplashActivity;
 import com.jlcsoftware.linkdisks.gallery.GalleryActivity;
+import com.jlcsoftware.linkdisks.gallery.GalleryApp;
 import com.jlcsoftware.linkdisks.imagepicker.BSImagePicker;
 import com.jlcsoftware.linkdisks.login_activity.Login;
 import com.jlcsoftware.linkdisks.sharedPreferencesss.SharedPreferencesClass;
@@ -79,7 +80,7 @@ public class HomeFragment extends Fragment {
         imageCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(), GalleryActivity.class));
+                startActivity(new Intent(getActivity(), GalleryApp.class));
             }
         });
 

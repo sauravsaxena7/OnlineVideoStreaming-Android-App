@@ -2,6 +2,7 @@ package com.jlcsoftware.linkdisks.apiInterface;
 
 import com.google.gson.JsonObject;
 import com.jlcsoftware.linkdisks.ModelResponse.GalleryResponse;
+import com.jlcsoftware.linkdisks.ModelResponse.ImageModelResponse;
 import com.jlcsoftware.linkdisks.ModelResponse.RegisterResponse;
 import com.jlcsoftware.linkdisks.ModelResponse.UpdatePassCodeResponse;
 import com.jlcsoftware.linkdisks.ModelResponse.UserOneResponse;
@@ -49,9 +50,21 @@ public interface Api {
     Call<UploadResult> uploadMultipleFiles(@Header("x-access-token") String token ,@PartMap Map<String, RequestBody> files);
 
 
+
+
     @Headers("Content-type: application/json")
-    @GET("/linkApi/ret_file")
-    Call<ResponseBody> retrieveMultipleFiles();
+    @POST("/linkApi/ret_file")
+    Call<ResponseBody> retrieveMultipleFiles(@Header("x-access-token") String token,@Body JsonObject jsonObject);
+
+
+
+
+
+    @Headers("Content-type: application/json")
+    @GET("/linkApi/list_img")
+    Call<ImageModelResponse> image_List(@Header("x-access-token") String token);
+
+
 
 
 
