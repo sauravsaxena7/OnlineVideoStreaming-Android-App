@@ -1,12 +1,12 @@
 # LinkDisk Android App With Backend As Flask Rest Api In MongoDb
 
 
->This application handles the users valuable data with encrypted passCode and using face detection
+>This application handles the users valuable data with encrypted passCode and using face detection.
 
 
 
 
->For Android Application Development we use IDE ANDROID STDIO and java.
+>
 
 
 
@@ -20,9 +20,10 @@
 
 ### Firstly you have to login or register to our app with right email and password.
 
- | LinkWink Splash Screen            
-:-------------------------:
-  <img src="images/splash_link_wink.jpg" alt="drawing" width="250"/>  
+ Light Splash Screen             |  Dark Spalsh Screen
+ :-------------------------:|:-------------------------:
+  <img src="images/light_s.jpg" alt="drawing" width="250"/>  | <img src="images/splash.jpg" alt="drawing" width="250"/>
+ 
 
 
 
