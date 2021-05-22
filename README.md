@@ -20,7 +20,7 @@
 
 ### Firstly you have to login or register to our app with right email and password.
 
- Light Splash Screen             |  Dark Spalsh Screen
+   Light Splash Screen             |  Dark Spalsh Screen
  :-------------------------:|:-------------------------:
   <img src="images/light_s.jpeg" alt="drawing" width="250"/>  | <img src="images/splash.jpeg" alt="drawing" width="250"/>
  
