@@ -36,14 +36,6 @@
   <img src="images/google_login.jpeg" alt="drawing" width="250"/>  | <img src="images/pass.jpeg" alt="drawing" width="250"/>
  
 
-//hi
-
-
-### Login System
-
- Login With Email orUsername             |  Login Witth Phone
-:-------------------------:|:-------------------------:
- <img src="images/email_login_link_wink.jpg" alt="drawing" width="250"/>  | <img src="images/phone_login_link_wink.jpg" alt="drawing" width="250"/>
 
 
 ### light mode
@@ -60,9 +52,6 @@ Home             |  Settings         |  Add
  <img src="images/light_h.jpeg" alt="drawing" width="250"/>  | <img src="images/light_st.jpeg" alt="drawing" width="250"/> | <img src="images/light_u.jpeg" alt="drawing" width="250"/>
 
 
-User profile             |  User Links         |  User Chat
-:-------------------------:|:-------------------------:|:-------------------------:
- <img src="images/other_user.jpg" alt="drawing" width="250"/>  | <img src="images/links.jpg" alt="drawing" width="250"/> | <img src="images/chat.jpg" alt="drawing" width="250"/>
 
 #Gallery
 
