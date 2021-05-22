@@ -22,7 +22,7 @@
 
  Light Splash Screen             |  Dark Spalsh Screen
  :-------------------------:|:-------------------------:
-  <img src="images/light_s.jpg" alt="drawing" width="250"/>  | <img src="images/splash.jpg" alt="drawing" width="250"/>
+  <img src="images/light_s.jpeg" alt="drawing" width="250"/>  | <img src="images/splash.jpeg" alt="drawing" width="250"/>
  
 
 
