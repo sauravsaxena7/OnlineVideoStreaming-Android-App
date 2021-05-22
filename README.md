@@ -64,22 +64,14 @@ User profile             |  User Links         |  User Chat
 :-------------------------:|:-------------------------:|:-------------------------:
  <img src="images/other_user.jpg" alt="drawing" width="250"/>  | <img src="images/links.jpg" alt="drawing" width="250"/> | <img src="images/chat.jpg" alt="drawing" width="250"/>
 
+#Gallery
 
-
-Logout            |  Messages
+Light            |  Dark
 :-------------------------:|:-------------------------:
- <img src="images/logout.jpg" alt="drawing" width="250"/>  | <img src="images/message.jpg" alt="drawing" width="250"/>
+ <img src="images/light_g.jpeg" alt="drawing" width="250"/>  | <img src="images/gal.jpeg" alt="drawing" width="250"/>
 
 
 
-Make Links            |  Link Sent         |  Invitations
-:-------------------------:|:-------------------------:|:-------------------------:
- <img src="images/make_links.jpg" alt="drawing" width="250"/>  | <img src="images/sent.jpg" alt="drawing" width="250"/> | <img src="images/invite.jpg" alt="drawing" width="250"/>
-
-
-Cancel Requested Links             |  Accept Links         |  Unlinked Links
-:-------------------------:|:-------------------------:|:-------------------------:
- <img src="images/cancel.jpg" alt="drawing" width="250"/>  | <img src="images/accept.jpg" alt="drawing" width="250"/> | <img src="images/unlinked.jpg" alt="drawing" width="250"/>
 
 
 
