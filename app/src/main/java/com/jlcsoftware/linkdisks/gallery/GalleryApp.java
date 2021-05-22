@@ -53,7 +53,7 @@ public class GalleryApp extends AppCompatActivity {
 
         progressBar=findViewById(R.id.image_progressBar);
 
-        recyclerView.setLayoutManager(new GridLayoutManager(this,3));
+        recyclerView.setLayoutManager(new GridLayoutManager(this,4));
         recyclerView.setHasFixedSize(true);
 
 
@@ -125,6 +125,7 @@ public class GalleryApp extends AppCompatActivity {
 
                         JsonObject jsonObject=new JsonObject();
                         jsonObject.addProperty("files_id",response.body().getImages().get(i).getFiles_id());
+                        Log.d("sss"+i,response.body().getImages().get(i).getFiles_id());
 
 
 

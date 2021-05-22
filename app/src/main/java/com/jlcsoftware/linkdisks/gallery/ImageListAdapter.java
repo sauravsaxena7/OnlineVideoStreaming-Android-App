@@ -3,6 +3,7 @@ package com.jlcsoftware.linkdisks.gallery;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,11 +12,14 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 
+import com.bumptech.glide.Glide;
 import com.jlcsoftware.linkdisks.R;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 import androidx.annotation.NonNull;
+import androidx.exifinterface.media.ExifInterface;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class ImageListAdapter extends RecyclerView.Adapter<ImageListAdapter.MyViewHolder> {
@@ -58,10 +62,14 @@ public class ImageListAdapter extends RecyclerView.Adapter<ImageListAdapter.MyVi
 
     @Override
     public void onBindViewHolder(@NonNull ImageListAdapter.MyViewHolder holder, int position) {
-        Bitmap bmp = BitmapFactory.decodeStream(imagessArrayList.get(position).getResponseBody().byteStream());
+       Bitmap bmp = BitmapFactory.decodeStream(imagessArrayList.get(position).getResponseBody().byteStream());
+
+        //Glide.with(context).load(Uri.parse(String.valueOf(bmp))).into(holder.imageView);
+        int rotation ;
+
 
         holder.imageView.setImageBitmap(bmp);
-        Log.d("sss5","set image");
+
     }
 
     @Override
