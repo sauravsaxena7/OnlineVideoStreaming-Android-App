@@ -115,7 +115,7 @@ public class GalleryApp extends AppCompatActivity {
                 if(response.isSuccessful()){
 
 
-                    Log.d("sss2",""+response.body().getImages().size());
+                    Log.d("sss3",""+response.body().getImages().size());
                     size=response.body().getImages().size();
                     final int[] count = {0};
 
