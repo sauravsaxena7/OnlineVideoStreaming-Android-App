@@ -57,7 +57,7 @@ Home             |  Settings         |  Add
 
 Home             |  Settings         |  Add
 :-------------------------:|:-------------------------:|:-------------------------:
- <img src="images/light_h.jpeg" alt="drawing" width="250"/>  | <img src="images/light_s.jpeg" alt="drawing" width="250"/> | <img src="images/light_u.jpeg" alt="drawing" width="250"/>
+ <img src="images/light_h.jpeg" alt="drawing" width="250"/>  | <img src="images/light_st.jpeg" alt="drawing" width="250"/> | <img src="images/light_u.jpeg" alt="drawing" width="250"/>
 
 
 User profile             |  User Links         |  User Chat
