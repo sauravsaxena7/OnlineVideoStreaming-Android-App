@@ -46,12 +46,18 @@
  <img src="images/email_login_link_wink.jpg" alt="drawing" width="250"/>  | <img src="images/phone_login_link_wink.jpg" alt="drawing" width="250"/>
 
 
-### User Profile
+### light mode
 
-Current User profile             |  Search User         |  Edit Profile
+Home             |  Settings         |  Add
 :-------------------------:|:-------------------------:|:-------------------------:
- <img src="images/link_wink_profile.jpg" alt="drawing" width="250"/>  | <img src="images/search.jpg" alt="drawing" width="250"/> | <img src="images/edit_profile.jpg" alt="drawing" width="250"/>
+ <img src="images/home.jpeg" alt="drawing" width="250"/>  | <img src="images/settings.jpeg" alt="drawing" width="250"/> | <img src="images/upload.jpeg" alt="drawing" width="250"/>
 
+
+### Dark  mode
+
+Home             |  Settings         |  Add
+:-------------------------:|:-------------------------:|:-------------------------:
+ <img src="images/light_h.jpeg" alt="drawing" width="250"/>  | <img src="images/light_s.jpeg" alt="drawing" width="250"/> | <img src="images/light_u.jpeg" alt="drawing" width="250"/>
 
 
 User profile             |  User Links         |  User Chat
