@@ -12,11 +12,16 @@
 
 ## Features Of Application
 
-&rarr; ToDo App handles your daily routine. some times you forgot to do your works.
+&rarr; This app features like google drive
 
-&rarr; Our App is very concern about your precious time. 
+&rarr; Where you can eaisly store your data and view your whenever you want
 
-&rarr; And this app will definitely help you todo your works on very right time.
+&rarr; This app is in under progress to achieve feature like face detection to secure your and online video streaming
+
+
+&rarr; Here you see out software screenShots 
+
+
 
 
 
@@ -58,6 +63,12 @@ Home             |  Settings         |  Add
 Light            |  Dark
 :-------------------------:|:-------------------------:
  <img src="images/light_g.jpeg" alt="drawing" width="250"/>  | <img src="images/gal.jpeg" alt="drawing" width="250"/>
+ 
+ 
+ #Video 
+ Light            |  Dark
+ :-------------------------:|:-------------------------:
+  <img src="images/v_l.jpeg" alt="drawing" width="250"/>  | <img src="images/v_d.jpeg" alt="drawing" width="250"/>
 
 
 
