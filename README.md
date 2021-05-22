@@ -18,7 +18,7 @@
 
 &rarr; And this app will definitely help you todo your works on very right time.
 
-### Firstly you have to login or register to our app with right email and password.
+
 
    Light Splash Screen             |  Dark Spalsh Screen
  :-------------------------:|:-------------------------:
@@ -27,13 +27,14 @@
 
 
 
-### Registration System
+### Login System
 
 
 
-Register Screen             |  Phone OTP Verification         |  Add User Details
-:-------------------------:|:-------------------------:|:-------------------------:
- <img src="images/register_link_wink.jpg" alt="drawing" width="250"/>  | <img src="images/phone_otp.jpg" alt="drawing" width="250"/> | <img src="images/user_details.jpg" alt="drawing" width="250"/>
+ Login With Google Api             |  Generate or Enter Your Passcode
+ :-------------------------:|:-------------------------:
+  <img src="images/google_login.jpeg" alt="drawing" width="250"/>  | <img src="images/pass.jpeg" alt="drawing" width="250"/>
+ 
 
 //hi
 
