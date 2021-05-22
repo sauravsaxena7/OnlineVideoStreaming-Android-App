@@ -14,9 +14,9 @@
 
 &rarr; This app features like google drive
 
-&rarr; Where you can eaisly store your data and view your whenever you want
+&rarr; Where you can eaisly store your data and view your whenever you want to access
 
-&rarr; This app is in under progress to achieve feature like face detection to secure your and online video streaming
+&rarr; This app is in under progress to achieve feature like face detection to secure your data and online video streaming app
 
 
 &rarr; Here you see out software screenShots 
